@@ -21,6 +21,10 @@ input {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   position: sticky;
   top: 0px;
@@ -214,7 +218,7 @@ nav {
 }
 
 .error.show {
-  display: block
+  display: block;
 }
 
 .add-btn {
@@ -271,9 +275,8 @@ nav {
 .post-item h1,
 .post-item h5,
 .post-item p {
-    width: calc(100% - 110px);
+  width: calc(100% - 110px);
 }
-
 
 .btn-delete {
   position: absolute;
