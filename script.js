@@ -103,8 +103,23 @@ function createItem(item) {
 
 
 
-function search() {
+function search(value) {
+    const storageList = JSON.parse(window.localStorage.getItem(storageItem));
 
+    if (!!storageList && value.length > 0) {
+        postSection.innerText = '';
+        const temp = storageList.filter((b) => b.title.includes(value) || b.date.includes(value))
+        console.log(temp)
+
+        temp.map((a) => {
+            createItem(a)
+        })
+    } else {
+        postSection.innerText = '';
+        storageList.map((a) => {
+            createItem(a)
+        })
+    }
 }
 
 window.onload = function () {
